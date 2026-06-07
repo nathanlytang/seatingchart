@@ -29,19 +29,27 @@ export default function App() {
   const partyIndex = useMemo(() => buildPartyIndex(guests), [guests]);
 
   return (
-    <div className="min-h-full bg-slate-50">
-      <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-4 pt-8 pb-12 sm:pt-16">
-        <header className="mb-6">
-          <h1 className="text-2xl font-bold text-slate-900">Find your seat</h1>
-          <p className="mt-1 text-sm text-slate-500">
-            Type your name to find your table.
+    <div className="min-h-full bg-cream-50">
+      <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-6 pt-12 pb-16 sm:pt-20">
+        <header className="mb-10 text-center">
+          <p className="text-xs uppercase tracking-[0.35em] text-sage-600">Welcome</p>
+          <h1 className="mt-3 font-serif text-5xl font-medium italic text-ink">
+            Find your seat
+          </h1>
+          <div className="mx-auto mt-5 flex items-center justify-center gap-3 text-blush-400">
+            <span className="h-px w-10 bg-blush-200" />
+            <span className="text-base">❧</span>
+            <span className="h-px w-10 bg-blush-200" />
+          </div>
+          <p className="mt-5 text-sm text-sage-700">
+            Kindly enter your name to find your table.
           </p>
         </header>
 
         {loading ? (
-          <p className="text-sm text-slate-500">Loading guest list…</p>
+          <p className="text-center text-sm italic text-sage-600">Loading guest list…</p>
         ) : error ? (
-          <p className="text-sm text-red-600">{error}</p>
+          <p className="text-center text-sm text-blush-600">{error}</p>
         ) : (
           <>
             <SearchBar

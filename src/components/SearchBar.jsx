@@ -49,24 +49,24 @@ export default function SearchBar({ guests, partyIndex, onSelect }) {
           onFocus={() => setOpen(true)}
           placeholder="Enter your name"
           autoFocus
-          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          className="w-full rounded-full border border-blush-200 bg-white/80 px-5 py-3.5 text-base text-ink placeholder:italic placeholder:text-sage-400 shadow-soft focus:border-blush-400 focus:outline-none focus:ring-2 focus:ring-blush-100"
         />
       </form>
 
       {showSuggestions && (
-        <ul className="absolute left-0 right-0 z-10 mt-2 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg">
+        <ul className="absolute left-0 right-0 z-10 mt-2 overflow-hidden rounded-2xl border border-blush-100 bg-white/95 shadow-soft backdrop-blur">
           {suggestions.length === 0 ? (
-            <li className="px-4 py-3 text-sm text-slate-500">No matches</li>
+            <li className="px-5 py-3 text-sm italic text-sage-600">No matches</li>
           ) : (
             suggestions.map((g) => (
               <li key={`${g.partyId}-${g.fullName}`}>
                 <button
                   type="button"
                   onClick={() => handleSelect(g)}
-                  className="flex w-full flex-col items-start gap-0.5 px-4 py-3 text-left hover:bg-indigo-50 active:bg-indigo-100"
+                  className="flex w-full flex-col items-start gap-0.5 border-b border-blush-100/60 px-5 py-3 text-left last:border-0 hover:bg-cream-100 active:bg-blush-100"
                 >
-                  <span className="font-medium text-slate-900">{g.fullName}</span>
-                  <span className="text-xs text-slate-500">{partyHint(g, partyIndex)}</span>
+                  <span className="font-serif text-lg text-ink">{g.fullName}</span>
+                  <span className="text-xs italic text-sage-600">{partyHint(g, partyIndex)}</span>
                 </button>
               </li>
             ))
