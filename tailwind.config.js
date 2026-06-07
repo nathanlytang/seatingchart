@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        numerals: ['Georgia', '"Times New Roman"', 'serif'],
       },
       colors: {
         cream: {

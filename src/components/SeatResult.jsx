@@ -15,7 +15,7 @@ export default function SeatResult({ guest, partyIndex }) {
           <span className="h-px w-8 bg-blush-200" />
         </div>
         <span className="font-serif text-xs uppercase tracking-[0.4em] text-sage-700">Table</span>
-        <span className="font-serif text-7xl font-medium text-blush-500">
+        <span className="font-numerals text-7xl font-medium text-blush-500">
           {guest.tableNumber}
         </span>
       </div>
