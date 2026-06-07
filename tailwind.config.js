@@ -27,6 +27,19 @@ export default {
           700: '#586850',
         },
         ink: '#3b2f2a',
+        pearl: '#fafafa',
+        bone: '#f4f1ec',
+        graphite: {
+          400: '#8a8680',
+          600: '#5b5752',
+          800: '#2b2926',
+        },
+        champagne: {
+          200: '#ead9b8',
+          400: '#c8a96a',
+          500: '#b08d4a',
+          600: '#8c6e35',
+        },
       },
       boxShadow: {
         soft: '0 10px 30px -12px rgba(75, 50, 40, 0.18)',

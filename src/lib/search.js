@@ -15,12 +15,17 @@ export function getPartyMembers(guest, partyIndex) {
   return members.filter((m) => m !== guest);
 }
 
+function normalize(s) {
+  return s.toLowerCase().replace(/\s+/g, '');
+}
+
 export function getSuggestions(query, guests) {
-  const q = query.trim().toLowerCase();
-  if (q.length < MIN_QUERY_LENGTH) return [];
+  if (query.trim().length < MIN_QUERY_LENGTH) return [];
+  const q = normalize(query);
+  if (q.length === 0) return [];
   const matches = [];
   for (const g of guests) {
-    if (g.fullName.toLowerCase().includes(q)) {
+    if (normalize(g.fullName).includes(q)) {
       matches.push(g);
       if (matches.length >= MAX_SUGGESTIONS) break;
     }

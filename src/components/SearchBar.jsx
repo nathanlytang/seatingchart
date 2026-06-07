@@ -49,24 +49,24 @@ export default function SearchBar({ guests, partyIndex, onSelect }) {
           onFocus={() => setOpen(true)}
           placeholder="Enter your name"
           autoFocus
-          className="w-full rounded-full border border-blush-200 bg-white/80 px-5 py-3.5 text-base text-ink placeholder:italic placeholder:text-sage-400 shadow-soft focus:border-blush-400 focus:outline-none focus:ring-2 focus:ring-blush-100"
+          className="w-full border-0 border-b border-graphite-400/40 bg-transparent px-1 py-3 text-center text-lg tracking-wide text-graphite-800 placeholder:font-serif placeholder:italic placeholder:text-graphite-400 focus:border-champagne-400 focus:outline-none focus:ring-0"
         />
       </form>
 
       {showSuggestions && (
-        <ul className="absolute left-0 right-0 z-10 mt-2 overflow-hidden rounded-2xl border border-blush-100 bg-white/95 shadow-soft backdrop-blur">
+        <ul className="absolute left-0 right-0 z-10 mt-3 overflow-hidden rounded-sm border border-graphite-400/15 bg-white shadow-soft">
           {suggestions.length === 0 ? (
-            <li className="px-5 py-3 text-sm italic text-sage-600">No matches</li>
+            <li className="px-5 py-4 text-center text-sm italic text-graphite-400">No matches</li>
           ) : (
             suggestions.map((g) => (
               <li key={`${g.partyId}-${g.fullName}`}>
                 <button
                   type="button"
                   onClick={() => handleSelect(g)}
-                  className="flex w-full flex-col items-start gap-0.5 border-b border-blush-100/60 px-5 py-3 text-left last:border-0 hover:bg-cream-100 active:bg-blush-100"
+                  className="flex w-full flex-col items-start gap-0.5 border-b border-graphite-400/10 px-5 py-3 text-left last:border-0 transition-colors hover:bg-bone active:bg-champagne-200/40"
                 >
-                  <span className="font-serif text-lg text-ink">{g.fullName}</span>
-                  <span className="text-xs italic text-sage-600">{partyHint(g, partyIndex)}</span>
+                  <span className="font-serif text-lg text-graphite-800">{g.fullName}</span>
+                  <span className="text-xs italic text-graphite-400">{partyHint(g, partyIndex)}</span>
                 </button>
               </li>
             ))

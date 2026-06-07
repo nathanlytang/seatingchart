@@ -29,25 +29,27 @@ export default function App() {
   const partyIndex = useMemo(() => buildPartyIndex(guests), [guests]);
 
   return (
-    <div className="min-h-full bg-cream-50">
-      <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-6 pt-12 pb-16 sm:pt-20">
-        <header className="mb-10 text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-sage-600">Welcome</p>
-          <h1 className="mt-3 font-serif text-5xl font-medium italic text-ink">
+    <div className="min-h-full bg-white">
+      <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-6 pt-14 pb-16 sm:pt-24">
+        <header className="mb-12 text-center">
+          <p className="text-[11px] uppercase tracking-[0.45em] text-champagne-500">
+            Welcome
+          </p>
+          <h1 className="mt-4 font-serif text-5xl font-normal text-graphite-800">
             Find your seat
           </h1>
-          <div className="mx-auto mt-5 flex items-center justify-center gap-3 text-blush-400">
-            <span className="h-px w-10 bg-blush-200" />
-            <span className="text-base">❧</span>
-            <span className="h-px w-10 bg-blush-200" />
+          <div className="mx-auto mt-6 flex items-center justify-center gap-3">
+            <span className="h-px w-12 bg-champagne-400" />
+            <span className="h-1.5 w-1.5 rotate-45 bg-champagne-400" />
+            <span className="h-px w-12 bg-champagne-400" />
           </div>
-          <p className="mt-5 text-sm text-sage-700">
+          <p className="mt-6 text-sm text-graphite-600">
             Kindly enter your name to find your table.
           </p>
         </header>
 
         {loading ? (
-          <p className="text-center text-sm italic text-sage-600">Loading guest list…</p>
+          <p className="text-center text-sm italic text-graphite-400">Loading guest list…</p>
         ) : error ? (
           <p className="text-center text-sm text-blush-600">{error}</p>
         ) : (
@@ -58,7 +60,7 @@ export default function App() {
               onSelect={setSelected}
             />
             {selected && (
-              <div className="mt-6">
+              <div className="mt-8">
                 <SeatResult guest={selected} partyIndex={partyIndex} />
               </div>
             )}
