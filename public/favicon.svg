@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="3" fill="#2b2926"/>
+  <text x="4" y="21" font-family="Georgia, serif" font-size="14" font-weight="400" fill="#c8a96a" letter-spacing="0">N</text>
+  <text x="15" y="18" font-family="Georgia, serif" font-size="6" font-weight="400" fill="#c8a96a" letter-spacing="0">+</text>
+  <text x="20" y="21" font-family="Georgia, serif" font-size="14" font-weight="400" fill="#c8a96a" letter-spacing="0">S</text>
+</svg>
