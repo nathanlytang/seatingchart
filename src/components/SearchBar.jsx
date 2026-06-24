@@ -3,7 +3,7 @@ import { getSuggestions, getPartyMembers, MIN_QUERY_LENGTH } from '../lib/search
 
 function partyHint(guest, partyIndex) {
   const members = getPartyMembers(guest, partyIndex);
-  if (members.length === 0) return 'party of 1';
+  if (members.length === 0) return '';
   return 'with ' + members.map((m) => m.fullName).join(', ');
 }
 
