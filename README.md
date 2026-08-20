@@ -2,12 +2,6 @@
 
 Seating chart — a mobile-first static React app that lets guests search their name and see their assigned table plus party members.
 
-## Stack
-
-- Vite + React
-- Tailwind CSS
-- pnpm
-
 ## Develop
 
 ```sh
